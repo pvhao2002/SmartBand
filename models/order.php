@@ -82,8 +82,8 @@ class Order
         switch ($this->paymentMethod) {
             case 'VN_PAY':
                 return 'VNPay';
-            case 'CASH':
-                return 'Tiền mặt';
+            case 'COD':
+                return 'Thanh toán khi nhận hàng';
             default:
                 return 'Chưa xác định';
         }
@@ -100,7 +100,7 @@ class Order
             case 'processing':
                 return 'Đang chuẩn bị hàng';
             case 'completed':
-                return 'Đã chuẩn bị hàng. Quý khách vui lòng đến cửa hàng để nhận hàng';
+                return 'Đơn hàng đang được giao đến bạn. Vui lòng kiểm tra điện thoại để nhận cuộc gọi từ nhân viên giao hàng. Xin cảm ơn!';
             case 'cancelled':
                 return 'Đã hủy';
             case 'refunded':

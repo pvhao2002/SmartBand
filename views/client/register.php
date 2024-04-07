@@ -11,7 +11,7 @@ if (isset($_SESSION['user'])) {
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>PETMART &ndash; Đăng ký tài khoản</title>
+    <title>Smartband &ndash; Đăng ký tài khoản</title>
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->

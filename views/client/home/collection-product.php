@@ -36,7 +36,7 @@ foreach ($cateList as $item) {
                                     echo '<img class="hover blur-up lazyload" data-src="' . $product->getProductImage() . '" src="' . $product->getProductImage() . '" alt="image" title="' . $product->getCategoryName() . '">';
                                     echo '<div class="product-labels rectangular"><span class="lbl pr-label1">new</span></div>';
                                     echo '</a>';
-                                    echo '<div class="saleTime desktop" data-countdown="2024/05/20"></div>';
+                                    echo '<div class="saleTime desktop" data-countdown="2024/4/21"></div>';
                                     echo '<form class="variants add" action="index.php?page=cart&act=add" method="post">';
                                     echo '<input type="hidden" name="pid" value="' . $product->getProductId() . '">';
                                     echo '<input type="hidden" name="price" value="' . $product->getProductPrice() . '">';

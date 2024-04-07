@@ -3,7 +3,7 @@ DELIMITER $$
 DROP PROCEDURE IF EXISTS `CreateOrder`$$
 CREATE PROCEDURE IF NOT EXISTS `CreateOrder`(
     IN user_id INT,
-    IN payment_method ENUM('CASH', 'VN_PAY'),
+    IN payment_method ENUM('COD', 'VN_PAY'),
     IN p_fullName VARCHAR(255),
     IN p_address VARCHAR(255),
     IN p_phone VARCHAR(20)

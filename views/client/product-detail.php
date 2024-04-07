@@ -63,7 +63,7 @@ $product = ProductDAO::getInstance()->getById($id);
                                     <?php echo $product->getStock(); ?> sản phẩm
                                 </span>
                             </div>
-                            <div class="product-sku">Mã sản phẩm: <span class="variant-sku">PETMART-
+                            <div class="product-sku">Mã sản phẩm: <span class="variant-sku">SMB-
                                     <?php echo $product->getProductId(); ?>
                                 </span></div>
                             <div class="product-review">

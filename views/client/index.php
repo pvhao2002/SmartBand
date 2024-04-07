@@ -222,7 +222,7 @@ switch ($page) {
                     header('Location: ' . $vnp_Url);
                     die();
                 } else {
-                    $orderId = OrderDAO::getInstance()->createOrder($userId, 'CASH', $fullName, $address, $phone);
+                    $orderId = OrderDAO::getInstance()->createOrder($userId, 'COD', $fullName, $address, $phone);
                     $fileQrCode = QRCodeGenerate::getInstance()->generate($orderId);
                     OrderDAO::getInstance()->updateQrCode($orderId, $fileQrCode);
                     $orderResult = OrderDAO::getInstance()->getOrderById($orderId);

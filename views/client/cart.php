@@ -113,7 +113,7 @@ if ($isLogin) {
 
                         <label for="">Phương thức thanh toán:</label>
                         <select name="payment" id="payment" class="form-control" required>
-                            <option value="CASH">Thanh toán tại cửa hàng</option>
+                            <option value="COD">Thanh toán khi nhận hàng</option>
                             <option value="VN_PAY">VN-PAY</option>
                         </select>
                     </div>

@@ -60,7 +60,7 @@ CREATE TABLE `orders` (
     `full_name` VARCHAR(255) NOT NULL,
     `total_price` DECIMAL(10, 2) NOT NULL,
     `total_quantity` INT NOT NULL,
-    `payment_method` ENUM('CASH', 'VN_PAY') NOT NULL,
+    `payment_method` ENUM('COD', 'VN_PAY') NOT NULL,
     `status` ENUM(
         'pending',
         'processing',

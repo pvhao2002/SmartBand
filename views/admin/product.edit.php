@@ -3,6 +3,7 @@ if (isset($_GET['status']) && $_GET['status'] === 'ok') {
     echo "<script> alert('Sửa thông tin sản phẩm thành công'); </script>";
 }
 $currentProduct = ProductDAO::getInstance()->getById($_GET['id']);
+$listCate = CategoryDAO::getInstance()->getAll();
 ?>
 
 <div class="col-12 grid-margin stretch-card">
@@ -10,8 +11,7 @@ $currentProduct = ProductDAO::getInstance()->getById($_GET['id']);
         <div class="card-body">
             <h4 class="card-title">Sửa thông tin sản phẩm</h4>
             <p class="card-description"> Nhập thông tin sản phẩm </p>
-            <form class="forms-sample" action="index.php?page=product&act=edit" method="post"
-                enctype="multipart/form-data">
+            <form class="forms-sample" action="index.php?page=product&act=edit" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<?php echo $currentProduct->getProductId(); ?>">
                 <div class="form-group">
                     <label for="exampleInputName1">Tên sản phẩm</label>
@@ -33,12 +33,11 @@ $currentProduct = ProductDAO::getInstance()->getById($_GET['id']);
                 <div class="form-group">
                     <label for="exampleSelectGender">Loại sản phẩm</label>
                     <select class="form-control" id="exampleSelectGender" name="category" required>
-                        <option value="1" <?php echo $currentProduct->getCategoryId() === 1 ? 'selected' : ''; ?>>Sản phẩm
-                            cho chó</option>
-                        <option value="2" <?php echo $currentProduct->getCategoryId() === 2 ? 'selected' : ''; ?>>Sản phẩm
-                            cho mèo</option>
-                        <option value="3" <?php echo $currentProduct->getCategoryId() === 3 ? 'selected' : ''; ?>> Sản
-                            phẩm cho chó và mèo</option>
+                        <?php
+                        foreach ($listCate as $cate) {
+                            echo "<option value='" . $cate->getCategoryId() . "'>" . $cate->getCategoryName() . "</option>";
+                        }
+                        ?>
                     </select>
                 </div>
 
